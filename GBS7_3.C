@@ -12,13 +12,13 @@ Write your code in this editor and press "Run" button to compile and execute it.
 int main()
 {
      int a[100000],l,i,n,min;
-    scanf("%d",&n);
-    for(i=0;i<n;i++)
+  
+    for(i=0;i<10;i++)
     {
         scanf("%d",&a[i]);
     }
     min=a[0];
-    for(i=1;i<n;i++)
+    for(i=1;i<10;i++)
     {
         if(min>a[i])
         {
