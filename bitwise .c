@@ -23,9 +23,10 @@ q3=0;
 
   for(i=p;i>0;i--)
   {
-      for(j=i+1;j>0;j--)
+      for(j=i-1;j>0;j--)
       {
           t=i&j;
+       //   printf("%d %d\n",i,j);
     if(t<k){      
         if(q1<t)
         {
@@ -41,7 +42,7 @@ q3=0;
   t=0;
   for(i=p;i>0;i--)
   {
-      for(j=i+1;j>0;j--)
+      for(j=i-1;j>0;j--)
       {
            t=i|j;
         
@@ -59,7 +60,7 @@ q3=0;
   //printf("\n");
   for(i=p;i>0;i--)
   {
-      for(j=i+1;j>0;j--)
+      for(j=i-1;j>0;j--)
       {    
           t=i^j;
       
