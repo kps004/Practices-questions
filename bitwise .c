@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
@@ -6,7 +7,7 @@
 
 
 void calculate_the_maximum(int n, int k) {
-  int i,j,t,p,q1=0,q2=0,q3=0;
+  int i,j,t,p,q1=0,q2=0,q3=0,c[10],m=0;
   if(n>=k)
   {
       p=n;
@@ -25,48 +26,53 @@ q3=0;
       for(j=i+1;j>0;j--)
       {
           t=i&j;
-          if(t<k)
-          
+    if(t<k){      
+        if(q1<t)
         {
-            if(q1<t-1)
-            {
-                q1=t;
-            }
-            //  printf("%d\n",t);
-              
-          }
+          q1=t;  
+        }
+        
+        
+    }
+         
       }
      // printf("\n");
   }
+  t=0;
   for(i=p;i>0;i--)
   {
       for(j=i+1;j>0;j--)
       {
            t=i|j;
-          if(t<k)
-          {  if(q2<t)
-            {
-              q2=t;
-               }
-             /// printf("%d\n",t);
-          }
+        
+        if(t<k)
+    {      
+        if(q2<t)
+        {
+          q2=t;  
+        }
+      }
       }
       
   }
+  t=0;
   //printf("\n");
   for(i=p;i>0;i--)
   {
       for(j=i+1;j>0;j--)
-      {     t=i^j;
-          if(t<k)
-          {  
-              if(q3<t)
-              {
-                  q3=t;
-              }
-            //  printf("%d\n",t);
-          }
+      {    
+          t=i^j;
+      
+         if(t<k)
+      {      
+        if(q3<t)
+        {
+          q3=t;  
+        }
+          
       }
+     }
+      
       
   }
   
